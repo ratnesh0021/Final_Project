@@ -1,0 +1,239 @@
+/* ========================= style.css (Updated with %) ========================= */
+
+/* Root Variables */
+:root {
+  --brand-blue: #003366;
+  --brand-accent: #0066cc;
+  --text-main: #333;
+  --text-muted: #555;
+  --bg-light: #f2f2f2;
+  --bg-white: #ffffff;
+  --radius: 10px;
+  --transition: 0.3s ease;
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= Header ================= */
+header {
+  background-color: var(--brand-blue);
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh; /* Now the header height is relative to screen */
+  min-height: 100px;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+header .logo img {
+  height: 80%;  /* Logo is 80% of header height */
+  width: auto;
+  transition: transform var(--transition);
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition);
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ================= Hero Section ================= */
+.hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #e6f2ff, #ffffff);
+  padding: 50px 20px;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 600px;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--text-muted);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ================= Buttons ================= */
+.btn {
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background var(--transition);
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background-color: var(--brand-accent);
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: #004c99;
+}
+
+.btn.secondary {
+  background-color: #e6e6e6;
+  color: #333;
+}
+
+.btn.secondary:hover {
+  background-color: #cccccc;
+}
+
+/* ================= Footer ================= */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: var(--brand-blue);
+  color: white;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+/* ================= Form ================= */
+.form-page {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.form-box {
+  background-color: var(--bg-white);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--brand-blue);
+}
+
+.form-box input[type="text"],
+.form-box input[type="email"],
+.form-box input[type="password"],
+.form-box input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-box button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+/* ================= Dashboard ================= */
+.dashboard {
+  flex: 1;
+  padding: 40px 20px;
+  background-color: var(--bg-white);
+  max-width: 900px;
+  margin: auto;
+}
+
+.dashboard h2 {
+  margin-bottom: 20px;
+  color: var(--brand-blue);
+}
+
+.file-list {
+  list-style: none;
+}
+
+.file-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.file-list a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: var(--brand-accent);
+}
+
+.file-list a:hover {
+  text-decoration: underline;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+  }
+
+  header .logo img {
+    height: 70%;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+}
