@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Upload File - SecureShare</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="assets/logo.png"/><h1>SecureShare</h1></div>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="upload.html">Upload</a>
+      <a href="index.html">Logout</a>
+    </nav>
+  </header>
+
+  <main class="form-page">
+    <form action="upload.php" method="POST" enctype="multipart/form-data" class="form-box">
+  <h2>Upload File</h2>
+  <input type="file" name="file" required />
+  <button type="submit" class="btn primary">Upload</button>
+</form>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SecureShare</p>
+  </footer>
+</body>
+</html>
